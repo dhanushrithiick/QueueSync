@@ -1,0 +1,199 @@
+/* ----------- Base Layout ----------- */
+body {
+  margin: 0;
+  font-family: "Inter", "SF Pro Display", "Segoe UI", sans-serif;
+  background: linear-gradient(145deg, #0f0f10, #181a1f);
+  color: #eaeaea;
+}
+
+.register-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+  min-height: 100vh;
+}
+
+/* ----------- Back Button ----------- */
+.back-button-container {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 15px;
+}
+
+.back-btn {
+  color: #9ecbff;
+  font-size: 0.95rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+  transition: all 0.25s ease;
+  padding: 6px 12px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.back-btn:hover {
+  color: #ffffff;
+  background: rgba(102, 178, 255, 0.15);
+  transform: translateX(-2px);
+  box-shadow: 0 0 12px rgba(102, 178, 255, 0.2);
+}
+
+/* ----------- Headings ----------- */
+.register-title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 6px;
+  text-align: center;
+}
+
+.register-subtitle {
+  color: #a5a5a5;
+  margin-bottom: 35px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* ----------- Card Style ----------- */
+.register-card {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 18px;
+  padding: 35px 40px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+  transition: all 0.3s ease-in-out;
+}
+
+.register-card:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  transform: translateY(-3px);
+}
+
+/* ----------- Form Styling ----------- */
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.form-group label {
+  color: #b5b5b5;
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+}
+
+.form-group input {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  font-size: 1rem;
+  border-radius: 10px;
+  padding: 12px 14px;
+  transition: all 0.25s ease;
+  outline: none;
+}
+
+.form-group input::placeholder {
+  color: #8d8d8d;
+}
+
+.form-group input:focus {
+  border-color: #66b2ff;
+  box-shadow: 0 0 0 3px rgba(102, 178, 255, 0.15);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* ----------- Button ----------- */
+.btn-primary {
+  background: linear-gradient(90deg, #3079ed, #2a62c3);
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 8px;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(90deg, #408af0, #3a70d0);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(48, 121, 237, 0.25);
+}
+
+/* ----------- Success Message ----------- */
+.success-message {
+  text-align: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.success-message h2 {
+  color: #9ecbff;
+  margin-bottom: 10px;
+}
+
+.info-highlight {
+  color: #66b2ff;
+  font-weight: 600;
+}
+
+/* ----------- Animation ----------- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ----------- Responsive ----------- */
+@media (max-width: 600px) {
+  .register-card {
+  
+    width: 70vw;
+  }
+
+  .register-title {
+    font-size: 1.9rem;
+    margin-top: 60px;
+  }
+
+  .register-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .register-form input {
+    font-size: 0.95rem;
+  }
+
+  .btn-primary {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  .back-btn {
+    font-size: 0.85rem;
+    padding: 5px 10px;
+  }
+}
